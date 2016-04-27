@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Angular Demo</title>
+<script type="text/javascript" src="../js/angular.min.js"></script>
+<script type="text/javascript" src="../js/myApp.js"></script>
+<script type="text/javascript" src="../js/service.js"></script>
+</head>
+<body>
+
+<!-- <div ng-app="">
+
+	<input type="text" ng-model="userName" name="userName"> 
+
+<h1>Hello! <span ng-bind="userName"></span> </h1>
+
+</div> -->
+
+
+<div ng-app="myApp" ng-controller="myCtlr">
+	
+	<h1> {{companyName}} </h1>
+
+
+<div ng-init="person={firstName:'tom',lastName:'Jerry',age:23}">
+	<p>FirstName: {{person.firstName}}</p>
+	<p>LastName: {{person.lastName}}</p>
+	<p>Age:{{person.age}}</p>
+	
+	<p>Full NAme: {{person.firstName + " " + person.lastName }}
+	
+	<p>Price : {{ 5*10 }} </p>
+	
+	
+	<input type="button" name="Save" value="Save" ng-click="myFunc()">
+	
+</div>
+
+
+</div>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+<bean id="address" class="org.capgemini.demo.Address" init-method="bean_Init"
+  destroy-method="bean_Destroy">
+	<property name="doorNo" value="23/A"/>
+	<property name="stName" value="North Avvenue"/>
+	<property name="city" value="Pune"/>
+</bean>
+
+<bean id="custaddress" class="org.capgemini.demo.Address">
+	<property name="doorNo" value="133-A"/>
+	<property name="stName" value="South Street"/>
+	<property name="city" value="Chennai"/>
+</bean>
+
+<bean id="cust" class="org.capgemini.demo.Customer"  
+		init-method="bean_Init" destroy-method="bean_Destroy">
+		
+		
+	 <property name="custId" value="1001"/>
+		<property name="custName" value="Tom Jerry"/>
+		<property name="contact" value="1234567890"/> 
+		 <property name="address" ref="address"/>  
+	
+	<!--<constructor-arg name="custId" value="1001"/>
+	<constructor-arg name="custName" value="Tom Jerry"/>
+	<constructor-arg name="contact" value="3243245324"/>
+	
+	
+ 	<constructor-arg name="address" ref="custAddress"/>
+	 -->
+	
+</bean>
+
+
+<bean id="BeanPP" class="org.capgemini.demo.BeanPPImpl"/>
+
+
+
+</beans>

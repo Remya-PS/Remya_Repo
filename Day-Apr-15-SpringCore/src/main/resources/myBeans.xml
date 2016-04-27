@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+<bean id="address" class="org.capgemini.demo.Address" >
+	<property name="stName" value="North Avvenue"/>
+	<property name="city" value="Pune"/>
+</bean>
+
+<bean id="custaddress" class="org.capgemini.demo.Address">
+	<property name="doorNo" value="133-A"/>
+	<property name="stName" value="South Street"/>
+	<property name="city" value="Chennai"/>
+</bean>
+
+<bean id="collDemo" class="org.capgemini.demo.CollectionDemo">
+	<property name="names">
+		<set>
+				<ref bean="address"/>
+				<ref bean="custaddress"/>
+				<ref bean="custaddress"/>
+	</set>
+
+
+	</property>
+	
+	<property name="maps">
+		<map>
+		<entry key="1" value="Tom"/>
+		<entry key="2" value="Jerry"/>
+		<entry key="3" value="Jack"/>
+		<entry key="4" value="Ram"/>
+		
+	</map>
+	
+	</property>
+	
+	<property name="properties">
+	
+		<props>
+			<prop key="one"> 1</prop>
+			<prop key="two"> 2</prop>
+			<prop key="three"> 3</prop>
+			<prop key="four"> 4</prop>
+			
+		</props>
+	</property>
+	
+	
+</bean>
+
+
+</beans>
