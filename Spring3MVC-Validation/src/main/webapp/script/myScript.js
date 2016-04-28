@@ -1,0 +1,4 @@
+function myDateFormat(){
+	alert('Hai');
+	
+}

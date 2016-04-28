@@ -1,0 +1,4 @@
+create table emp_info(empid int primary key auto_increment,
+firstName varchar(25) not null, lastName varchar(25),
+salary double, age int,empDob date, employeeDoj date,
+email varchar(100));
