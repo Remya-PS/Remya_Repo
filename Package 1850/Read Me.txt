@@ -1,0 +1,2 @@
+Group Id: org.capgemini.capstore
+Artifact Id:CapStore

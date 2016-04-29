@@ -1,24 +1,22 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.flp.capstore</groupId>
-  <artifactId>cartManagement</artifactId>
+  <groupId>org.capgemini.capstore</groupId>
+  <artifactId>CapStore</artifactId>
   <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
-  <name>cartManagement Maven Webapp</name>
+  <name>CapStore Maven Webapp</name>
   <url>http://maven.apache.org</url>
-<properties>
+ <properties>
   	<spring.version>3.1.0.RELEASE</spring.version>
-  	<jackson.version>1.9.10</jackson.version>
-  </properties>  
+  	 <jackson.version>1.9.10</jackson.version>
+  </properties>
   
   <dependencies>
+  
   <!-- Jackson JSON Mapper -->
-		<dependency>
-			<groupId>org.codehaus.jackson</groupId>
-			<artifactId>jackson-mapper-asl</artifactId>
-			<version>${jackson.version}</version>
-		</dependency>
+		
+		
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -37,6 +35,12 @@
   	<artifactId>cglib</artifactId>
   	<version>2.2.2</version>
   </dependency>
+  
+  <dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
   
   <!-- JSp -->
   	<dependency> 
@@ -245,6 +249,6 @@
     
   </dependencies>
   <build>
-    <finalName>cartManagement</finalName>
+    <finalName>CapStore</finalName>
   </build>
 </project>
